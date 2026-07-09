@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#222;
+    color:white;
+    font-family:Arial;
+}
+
+.clock{
+    padding:30px 60px;
+    border:4px solid cyan;
+    border-radius:15px;
+    box-shadow:0 0 20px cyan;
+}
+
+h1{
+    font-size:70px;
+}

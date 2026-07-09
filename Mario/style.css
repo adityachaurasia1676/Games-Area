@@ -9,57 +9,152 @@ body{
     justify-content:center;
     align-items:center;
     height:100vh;
-    background:#87CEEB;
+    background:#5c94fc;
 }
 
-#game{
-    width:800px;
-    height:400px;
+.game{
+    width:1000px;
+    height:500px;
     border:3px solid black;
     position:relative;
     overflow:hidden;
-    background:skyblue;
+    background:linear-gradient(#5c94fc,#87ceeb);
 }
 
-#player{
-    width:40px;
-    height:40px;
+.world{
     position:absolute;
-    left:50px;
-    bottom:50px;
+    width:4000px;
+    height:100%;
+    left:0;
+    top:0;
 }
 
-#mario{
-    width:40px;
-}
+/* Ground */
 
 .ground{
     width:100%;
-    height:50px;
-    background:green;
+    height:70px;
+    background:saddlebrown;
     position:absolute;
     bottom:0;
 }
 
-.platform{
+/* Mario */
+
+.player{
+    width:60px;
+    height:60px;
     position:absolute;
-    width:150px;
-    height:20px;
-    margin-bottom:20px;
-    background:brown;
+    left:100px;
+    bottom:70px;
+
+    background:url("mario-running-8-bit-sticker-21z0o619xzhlxhss.gif");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 
-.p1{
-    left:200px;
-    bottom:130px;
+/* Clouds */
+
+.cloud{
+    width:100px;
+    height:60px;
+    background:white;
+    border-radius:50px;
+    position:absolute;
 }
 
-.p2{
-    left:450px;
-    bottom:200px;
+.cloud::before{
+    content:"";
+    width:60px;
+    height:60px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    top:-20px;
+    left:15px;
 }
 
-.p3{
-    left:650px;
-    bottom:100px;
+.cloud::after{
+    content:"";
+    width:50px;
+    height:50px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    top:-10px;
+    right:10px;
 }
+
+.cloud1{
+    top:50px;
+    left:150px;
+}
+
+.cloud2{
+    top:80px;
+    left:900px;
+}
+
+/* Blocks */
+
+.question{
+    width:55px;
+    height:55px;
+    background:gold;
+    border:3px solid brown;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:35px;
+    font-weight:bold;
+
+    position:absolute;
+    top:180px;
+}
+
+.q1{ left:1300px; }
+.q2{ left:1360px; }
+.q3{ left:1420px; }
+
+.brick{
+    width:55px;
+    height:55px;
+    background:#b86a1d;
+    border:2px solid #7a3b00;
+    position:absolute;
+    top:180px;
+}
+
+.b1{ left:1480px; }
+.b2{ left:1540px; }
+
+/* Pipes */
+
+.pipe{
+    width:80px;
+    position:absolute;
+    bottom:70px;
+}
+
+.pipe1{
+    left:800px;
+}
+
+.pipe2{
+    left:1800px;
+}
+
+.pipe3{
+    left:2800px;
+}
+
+
+.mushroom{
+    width:45px;
+    position:absolute;
+    left:1300px;
+    bottom:70px;
+} 
